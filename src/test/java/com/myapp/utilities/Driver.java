@@ -15,35 +15,34 @@ public class Driver {
     private static WebDriver driver;
 
     //    1. getDriver : setup and instantiate the driver object
-    public static WebDriver getDriver(){
-        if (driver==null){
-            switch (ConfigReader.getProperty("browser")){
+    public static WebDriver getDriver() {
+        if (driver == null) {
+            switch (ConfigReader.getProperty("browser")) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver=new ChromeDriver();
+                    driver = new ChromeDriver();
                     break;
 
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
-                    driver= new FirefoxDriver();
+                    driver = new FirefoxDriver();
                     break;
 
                 case "chrome-headless":
                     WebDriverManager.chromedriver().setup();
-                    driver=new ChromeDriver(new ChromeOptions().setHeadless(true));
+                    driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
                     break;
 
                 case "edge":
                     WebDriverManager.edgedriver().setup();
-                    driver=new EdgeDriver();
+                    driver = new EdgeDriver();
                     break;
 
                 case "safari":
                     WebDriverManager.safaridriver().setup();
-                    driver=new SafariDriver();
+                    driver = new SafariDriver();
                     break;
             }
-
 
 
         }
@@ -51,11 +50,12 @@ public class Driver {
         driver.manage().window().maximize();
         return driver;
     }
+
     //    2. closeDriver : quits the driver
-    public static void closeDriver(){
-        if (driver!=null){
+    public static void closeDriver() {
+        if (driver != null) {
             driver.quit();
-            driver=null;
+            driver = null;
         }
     }
 

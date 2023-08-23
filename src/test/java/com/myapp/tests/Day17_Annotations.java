@@ -7,15 +7,20 @@ import static org.testng.AssertJUnit.assertTrue;
 public class Day17_Annotations {
     /*
     @Test: @Test annotation creates test cases. It marks methods as test case. We have 6 test methods in this class.
-    @Before and @After: These two are JUnit annotations but we have 5 @Before and @After annotation types in Test NG.
+    @Before and @After: These two are JUnit annotations, but we have 5 @Before and @After annotation types in Test NG.
+
     @BeforeSuite: Runs before suite just once
     @AfterSuite: Runs after suite just once
+
     @BeforeClass: Runs before each class just once
     @AfterClass: Runs after each class just once
+
     @BeforeTest: Runs before each test class just once
     @AfterTest: Runs after each test class just once
+
     @BeforeGroups: Runs before declared groups
     @AfterGroups: Runs after declared groups
+
     @BeforeMethod: Runs before each @Test methods
     @AfterMethod: Runs after each @Test methods
 
@@ -26,7 +31,7 @@ public class Day17_Annotations {
 
     @Ignore: Ignores/Skips test cases
 
-    @Test( enabled = false) --> Disable the test case. It is not going to be unable.
+    @Test( enabled = false) --> Disable the test case. It is not going to be runable(run).
 
     class name method names they cannot start with NUMBERS.
 

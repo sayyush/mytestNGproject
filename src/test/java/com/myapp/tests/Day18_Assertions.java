@@ -4,11 +4,16 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class Day18_Assertions {
+ public class Day18_Assertions {
 
     @Test
     public void hardAssertion(){
         /*
+        Assert.assertTrue()   <== Junit den gelen  Hard assertion
+        SoftAssert
+
+
+
         Hard assertion will stop if the assertion fails. This is used A LOT
          */
         System.out.println("Starting the test case");
@@ -23,10 +28,13 @@ public class Day18_Assertions {
         /*
         Test case will continue to execute EVEN IF A TEST ASSERTION FAILS
         We must use SoftAssert object to do soft assertion.
+
         assertAll must be used to do actual assertion. it makes the test case as FAILED if assertion fails
          */
         System.out.println("Starting the test case");
+        //1. yol softAssert objesi olusturma.
         SoftAssert softAssert = new SoftAssert();
+
         softAssert.assertTrue(true);//PASS SO CONTINUE
         System.out.println("Line 32 codes");
         softAssert.assertEquals(3,4);//FAILS BUT CONTINUE WITHOUT PROBLEM UNTIL END OF THE METHOD
